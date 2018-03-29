@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Polymer Starter Kit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>Connect Keynote</title>
+    <meta name="description" content="My App description">
+    <link rel="icon" href="images/favicon.ico">
+    <meta name="theme-color" content="#3f51b5">
+    <script>
+      window.Polymer = {rootPath: '/'};
+    </script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
+    <link rel="import" href="bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+    <link rel="import" href="bower_components/app-layout/app-header/app-header.html">
+    <link rel="import" href="bower_components/app-layout/app-header-layout/app-header-layout.html">
+    <link rel="import" href="bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+    <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
+    <link rel="import" href="bower_components/app-route/app-location.html">
+    <link rel="import" href="bower_components/app-route/app-route.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <custom-style>
+      <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #eeeeee;
+      }
+      :root {
+        /* CSS variables for components goes here  */
+      }
+
+      app-drawer-layout:not([narrow]) [drawer-toggle] {
+        /* Hiddes paper-icon-button when not in narrow layour */
+        display: none;
+      }
+
+      app-toolbar {
+        background-color: rgba(0,0,0,0.85);
+        color: #fff;
+      }
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <app-drawer-layout>
+      <app-drawer slot="drawer">
+        <app-toolbar>
+          <div>Menu</div>
+        </app-toolbar>
+        drawer content
+      </app-drawer>
+
+      <app-header-layout>
+        <app-header slot="header" fixed condenses effects="waterfall">
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <div main-title>Connect Demo</div>
+          </app-toolbar>
+        </app-header>
+        <div>
+          main content
+        </div>
+      </app-header-layout>
+
+    </app-drawer-layout>
+  </body>
+</html>

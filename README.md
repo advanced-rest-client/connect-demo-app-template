@@ -6,7 +6,7 @@ To run the page.
 
 ```
 sudo npm i -g bower
-sudo npm i -g polymer-cli
+sudo npm i -g polymer-cli --unsafe-perm
 ```
 
 2. Clone the repo
